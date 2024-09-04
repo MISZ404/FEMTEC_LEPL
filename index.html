@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEMTEC - Entrevista Remota</title>
+    <!-- Favicon -->
+    <link rel="icon" href="3.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="1.png" alt="Empresa XYZ Logo" class="logo">
+    <h1>FEMTEC</h1>
+</header>
+
+<div class="container">
+    <h1>Entrevista Remota</h1>
+    <form id="interviewForm">
+        <!-- Estudo de Caso 1 -->
+        <div id="case1" class="case-study">
+            <p><strong>Estudo de Caso 1:</strong> Você está gerenciando um projeto importante com um prazo apertado. No meio do projeto, você descobre que um dos membros da equipe está atrasando as entregas e afetando o progresso geral.</p>
+            <label><input type="radio" name="case1" value="4" onclick="nextCase(1)"> Falar diretamente com o membro da equipe para entender as dificuldades e oferecer suporte.</label>
+            <label><input type="radio" name="case1" value="1" onclick="nextCase(1)"> Discutir o problema com a equipe sem confrontar o membro específico.</label>
+            <label><input type="radio" name="case1" value="0" onclick="nextCase(1)"> Ignorar o problema e esperar que o membro da equipe se ajuste por conta própria.</label>
+            <label><input type="radio" name="case1" value="5" onclick="nextCase(1)"> Reunir a equipe, identificar os problemas e realocar tarefas para garantir que o prazo seja cumprido, mantendo a motivação.</label>
+            <label><input type="radio" name="case1" value="2" onclick="nextCase(1)"> Reportar imediatamente o problema ao superior sem falar com o membro da equipe.</label>
+        </div>
+
+        <div id="case2" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 2:</strong> Um cliente importante reclama de um serviço que não atendeu às suas expectativas. O cliente está irritado e ameaça levar seu negócio para outro lugar.</p>
+            <label><input type="radio" name="case2" value="4" onclick="nextCase(2)"> Pedir desculpas ao cliente, investigar o problema e propor uma solução rápida e eficiente.</label>
+            <label><input type="radio" name="case2" value="5" onclick="nextCase(2)"> Pedir desculpas, investigar a fundo a questão, resolver o problema e oferecer um benefício adicional ao cliente para manter o relacionamento.</label>
+            <label><input type="radio" name="case2" value="2" onclick="nextCase(2)"> Oferecer um desconto para apaziguar o cliente, sem investigar o problema.</label>
+            <label><input type="radio" name="case2" value="0" onclick="nextCase(2)"> Ignorar a reclamação do cliente.</label>
+            <label><input type="radio" name="case2" value="1" onclick="nextCase(2)"> Informar ao cliente que a empresa está ciente do problema e que ele será resolvido em breve, sem dar muitos detalhes.</label>
+        </div>
+
+        <div id="case3" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 3:</strong> Um dos seus funcionários-chave solicitou uma licença de emergência por motivos pessoais. Isso deixará a equipe desfalcada em um período crítico.</p>
+            <label><input type="radio" name="case3" value="5" onclick="nextCase(3)"> Aceitar o pedido, redistribuir as tarefas após consultar a equipe e, se necessário, contratar temporariamente um substituto.</label>
+            <label><input type="radio" name="case3" value="4" onclick="nextCase(3)"> Aceitar o pedido, redistribuir as tarefas com a equipe, solicitando a colaboração de todos.</label>
+            <label><input type="radio" name="case3" value="2" onclick="nextCase(3)"> Aceitar o pedido e distribuir as tarefas do funcionário entre os membros restantes, sem consultar a equipe.</label>
+            <label><input type="radio" name="case3" value="1" onclick="nextCase(3)"> Aceitar o pedido, mas não tomar medidas para cobrir a ausência.</label>
+            <label><input type="radio" name="case3" value="0" onclick="nextCase(3)"> Negar o pedido de licença, insistindo na presença do funcionário.</label>
+        </div>
+
+        <div id="case4" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 4:</strong> Você precisa escolher entre dois fornecedores. Um oferece um preço menor, mas não é muito confiável; o outro é mais caro, mas é altamente recomendado e confiável.</p>
+            <label><input type="radio" name="case4" value="4" onclick="nextCase(4)"> Fazer uma análise de custo-benefício e tentar negociar preços com ambos os fornecedores.</label>
+            <label><input type="radio" name="case4" value="1" onclick="nextCase(4)"> Escolher o fornecedor mais caro com base apenas nas recomendações.</label>
+            <label><input type="radio" name="case4" value="0" onclick="nextCase(4)"> Escolher o fornecedor mais barato sem considerar a confiabilidade.</label>
+            <label><input type="radio" name="case4" value="2" onclick="nextCase(4)"> Pedir descontos ao fornecedor mais caro, sem negociar com o mais barato.</label>
+            <label><input type="radio" name="case4" value="5" onclick="nextCase(4)"> Negociar com ambos, considerar fatores como qualidade, prazos e histórico, e então tomar uma decisão informada.</label>
+        </div>
+
+        <div id="case5" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 5:</strong> Sua empresa está enfrentando um declínio nas vendas e você identificou que o processo de vendas precisa ser otimizado.</p>
+            <label><input type="radio" name="case5" value="5" onclick="nextCase(5)"> Reunir dados, consultar a equipe, realizar testes-piloto e, em seguida, implementar uma solução inovadora com acompanhamento contínuo.</label>
+            <label><input type="radio" name="case5" value="4" onclick="nextCase(5)"> Consultar a equipe para identificar falhas e implementar uma solução em fases, com testes.</label>
+            <label><input type="radio" name="case5" value="2" onclick="nextCase(5)"> Identificar um novo processo, mas não fazer um teste piloto antes de implementá-lo em larga escala.</label>
+            <label><input type="radio" name="case5" value="1" onclick="nextCase(5)"> Implementar uma pequena mudança no processo sem consultar a equipe.</label>
+            <label><input type="radio" name="case5" value="0" onclick="nextCase(5)"> Continuar com o processo atual, esperando que as vendas se recuperem por conta própria.</label>
+        </div>
+
+        <div id="case6" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 6:</strong> Um problema técnico grave ocorreu no sistema da empresa, afetando vários clientes importantes.</p>
+            <label><input type="radio" name="case6" value="4" onclick="nextCase(6)"> Comunicar imediatamente o problema aos clientes, fornecer uma solução temporária e trabalhar para resolver o problema permanentemente.</label>
+            <label><input type="radio" name="case6" value="5" onclick="nextCase(6)"> Comunicar proativamente o problema, fornecer soluções alternativas, manter os clientes atualizados regularmente e implementar medidas para evitar problemas futuros.</label>
+            <label><input type="radio" name="case6" value="2" onclick="nextCase(6)"> Trabalhar na solução, mas não informar os clientes sobre o progresso.</label>
+            <label><input type="radio" name="case6" value="1" onclick="nextCase(6)"> Informar aos clientes que o problema está sendo resolvido, sem fornecer detalhes ou prazos.</label>
+            <label><input type="radio" name="case6" value="0" onclick="nextCase(6)"> Ignorar o problema, esperando que ele se resolva por si só.</label>
+        </div>
+
+        <div id="case7" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 7:</strong> Um colega foi promovido, mas você tem dúvidas sobre a forma como ele alcançou essa promoção.</p>
+            <label><input type="radio" name="case7" value="4" onclick="nextCase(7)"> Conversar com o colega para entender melhor suas estratégias e abordagem.</label>
+            <label><input type="radio" name="case7" value="1" onclick="nextCase(7)"> Questionar a promoção com a gerência, sem discutir com o colega.</label>
+            <label><input type="radio" name="case7" value="2" onclick="nextCase(7)"> Ignorar a promoção e continuar seu trabalho como antes.</label>
+            <label><input type="radio" name="case7" value="0" onclick="nextCase(7)"> Falar mal do colega para outros membros da equipe.</label>
+            <label><input type="radio" name="case7" value="5" onclick="nextCase(7)"> Refletir sobre sua própria carreira e discutir com a gerência sobre oportunidades de desenvolvimento pessoal.</label>
+        </div>
+
+        <!-- Estudo de Caso 8 -->
+        <div id="case8" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 8:</strong> Você é o gerente financeiro de uma empresa de médio porte que, de repente, enfrenta uma crise financeira devido a uma combinação de fatores externos, como uma desaceleração econômica e um aumento nos custos de produção. A empresa está à beira de uma insolvência e precisa tomar medidas imediatas para cortar custos e aumentar a receita, tudo isso sem afetar significativamente o moral dos funcionários.
+
+
+Pergunta: Como você abordaria essa situação para garantir a sobrevivência da empresa?
+</p>
+            <label><input type="radio" name="case8" value="0" onclick="nextCase(8)"> Propor cortes imediatos e significativos de pessoal para reduzir custos operacionais.</label>
+            <label><input type="radio" name="case8" value="5" onclick="nextCase(8)"> Revisar todos os contratos com fornecedores e negociar novos termos, ao mesmo tempo em que busca novas fontes de financiamento.</label>
+            <label><input type="radio" name="case8" value="4" onclick="nextCase(8)"> Lançar uma campanha interna para reduzir desperdícios e aumentar a eficiência, envolvendo toda a equipe no processo.</label>
+            <label><input type="radio" name="case8" value="2" onclick="nextCase(8)"> Solicitar um empréstimo bancário para cobrir as despesas imediatas, com planos de reestruturação a longo prazo.</label>
+            <label><input type="radio" name="case8" value="1" onclick="nextCase(8)"> Priorizar o pagamento de dívidas e cortar todos os projetos de expansão para focar na manutenção das operações atuais.</label>
+        </div>
+
+        <!-- Estudo de Caso 9 -->
+        <div id="case9" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 9:</strong> Implementação de Novas Tecnologias
+Cenário: Sua empresa decidiu implementar uma nova tecnologia de automação que promete aumentar a eficiência em 30%. No entanto, a equipe está dividida, com alguns membros receosos de perder seus empregos e outros entusiasmados com a modernização. Além disso, o prazo para a implementação é apertado e qualquer atraso pode resultar em perda de competitividade.
+
+
+Pergunta: Como você gerenciaria a implementação dessa nova tecnologia?</p>
+            <label><input type="radio" name="case9" value="5" onclick="nextCase(9)"> Oferecer treinamento extensivo para todos os funcionários e garantir que todos estejam confortáveis com a nova tecnologia antes de implementá-la.</label>
+            <label><input type="radio" name="case9" value="4" onclick="nextCase(9)"> Implementar a tecnologia gradualmente, começando com uma pequena equipe piloto para testar a eficácia antes de expandir para toda a empresa.</label>
+            <label><input type="radio" name="case9" value="2" onclick="nextCase(9)"> Realocar funcionários para novas funções que não sejam afetadas pela automação, garantindo que ninguém perca o emprego.</label>
+            <label><input type="radio" name="case9" value="1" onclick="nextCase(9)"> Promover uma campanha interna de comunicação para esclarecer os benefícios da tecnologia e mitigar os temores dos funcionários.</label>
+            <label><input type="radio" name="case9" value="0" onclick="nextCase(9)"> Implementar a tecnologia rapidamente para não perder a competitividade, lidando com as preocupações dos funcionários posteriormente.</label>
+        </div>
+
+        <!-- Estudo de Caso 10 -->
+        <div id="case10" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 10:</strong> Lidar com um Escândalo de Relações Públicas
+Cenário: Um produto recente lançado pela sua empresa foi encontrado com um defeito grave que coloca em risco a segurança dos consumidores. A mídia começou a noticiar o caso, e a reputação da empresa está em jogo. Você é o diretor de marketing e precisa lidar com essa crise rapidamente.
+
+
+Pergunta: Qual seria sua estratégia para gerenciar essa situação de crise?</p>
+            <label><input type="radio" name="case10" value="5" onclick="nextCase(10)"> Lançar um recall imediato do produto e oferecer compensações aos consumidores afetados, acompanhado de uma campanha de relações públicas para restaurar a confiança.</label>
+            <label><input type="radio" name="case10" value="0" onclick="nextCase(10)"> Negar qualquer responsabilidade e contestar as alegações da mídia, mantendo o produto no mercado.</label>
+            <label><input type="radio" name="case10" value="1" onclick="nextCase(10)"> Emitir um comunicado público reconhecendo o problema, mas minimizando a gravidade da situação.</label>
+            <label><input type="radio" name="case10" value="2" onclick="nextCase(10)"> Investigar internamente o problema antes de tomar qualquer ação pública.</label>
+            <label><input type="radio" name="case10" value="4" onclick="nextCase(10)"> Suspender a venda do produto imediatamente e formar uma equipe de crise para lidar com a situação, mantendo os consumidores informados sobre os próximos passos.</label>
+        </div>
+
+        <!-- Estudo de Caso 11 -->
+        <div id="case11" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 11:</strong> Reestruturação Organizacional
+Cenário: Sua empresa está passando por uma grande reestruturação, que envolve a fusão de dois departamentos que historicamente não se dão bem. Como gerente de ambos os departamentos, você é responsável por garantir que essa fusão seja o mais suave possível, mas está ciente de que há ressentimento e resistência entre os funcionários.
+
+
+Pergunta: Como você conduziria essa reestruturação para minimizar conflitos e garantir a produtividade?</p>
+            <label><input type="radio" name="case11" value="5" onclick="nextCase(11)"> Realizar workshops de integração para promover o trabalho em equipe e quebrar barreiras entre os departamentos.</label>
+            <label><input type="radio" name="case11" value="0" onclick="nextCase(11)"> Impor a nova estrutura sem espaço para discussão.</label>
+            <label><input type="radio" name="case11" value="4" onclick="nextCase(11)"> Consultar os funcionários de ambos os departamentos sobre suas preocupações e sugestões.</label>
+            <label><input type="radio" name="case11" value="2" onclick="nextCase(11)"> Manter líderes de opinião em ambos os departamentos para ajudar na transição.</label>
+            <label><input type="radio" name="case11" value="1" onclick="nextCase(11)"> Focar em uma comunicação clara para garantir que todos entendam os motivos e benefícios da reestruturação.</label>
+        </div>
+
+        <!-- Estudo de Caso 12 -->
+        <div id="case12" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 12:</strong> Gestão de Talentos em Expansão Rápida
+Cenário: Sua empresa está crescendo rapidamente e precisa contratar novos funcionários para atender à demanda. No entanto, a rapidez com que as contratações estão sendo feitas resultou em problemas de integração e de manutenção da cultura organizacional. Como líder de RH, você precisa criar um plano para garantir que os novos funcionários se integrem bem e que a cultura da empresa seja preservada.
+
+
+Pergunta: Qual seria o seu plano de ação?</p>
+            <label><input type="radio" name="case12" value="5" onclick="nextCase(12)"> Desenvolver um programa de integração robusto que inclua mentoria e treinamentos regulares sobre a cultura da empresa.</label>
+            <label><input type="radio" name="case12" value="4" onclick="nextCase(12)"> Focar na contratação de candidatos que já possuam valores alinhados com a cultura da empresa.</label>
+            <label><input type="radio" name="case12" value="2" onclick="nextCase(12)"> Reduzir o ritmo das contratações para garantir a integração adequada.</label>
+            <label><input type="radio" name="case12" value="1" onclick="nextCase(12)"> Implementar uma avaliação de 360 graus para novos funcionários após os primeiros 3 meses.</label>
+            <label><input type="radio" name="case12" value="0" onclick="nextCase(12)"> Organizar eventos sociais internos para promover a integração.</label>
+        </div>
+
+        <!-- Estudo de Caso 13 -->
+        <div id="case13" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 13:</strong> Liderança em Equipe Desmotivada
+Cenário: Você foi promovido a gerente de uma equipe que recentemente passou por uma grande reestruturação e perdeu vários de seus membros. Os funcionários restantes estão desmotivados e desconfiados da nova gestão. Como novo gerente, é sua responsabilidade reverter essa situação.
+
+
+Pergunta: Qual seria sua abordagem para reconstruir a confiança e motivar sua equipe?</p>
+            <label><input type="radio" name="case13" value="5" onclick="nextCase(13)"> Realizar reuniões individuais com cada membro da equipe para entender suas preocupações.</label>
+            <label><input type="radio" name="case13" value="2" onclick="nextCase(13)"> Introduzir novos incentivos para motivar a equipe.</label>
+            <label><input type="radio" name="case13" value="1" onclick="nextCase(13)"> Focar em tarefas de curto prazo para gerar resultados rápidos.</label>
+            <label><input type="radio" name="case13" value="4" onclick="nextCase(13)"> Promover um ambiente aberto para feedback e sugestões.</label>
+            <label><input type="radio" name="case13" value="0" onclick="nextCase(13)"> Implemente uma nova abordagem de gerenciamento sem considerar o feedback da equipe.</label>
+        </div>
+
+        <!-- Estudo de Caso 14 -->
+        <div id="case14" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 14:</strong> Diversidade e Inclusão no Local de Trabalho: Sua empresa decidiu adotar políticas de diversidade e inclusão. Como você conduziria essa mudança?</p>
+            <label><input type="radio" name="case14" value="5" onclick="nextCase(14)"> Criar comitês de diversidade compostos por funcionários de diferentes departamentos para garantir que as vozes de todos sejam ouvidas.</label>
+            <label><input type="radio" name="case14" value="4" onclick="nextCase(14)"> Realizar treinamentos regulares sobre diversidade e inclusão para todos os funcionários.</label>
+            <label><input type="radio" name="case14" value="2" onclick="nextCase(14)"> Implementar políticas rigorosas de contratação que priorizem a diversidade.</label>
+            <label><input type="radio" name="case14" value="1" onclick="nextCase(14)"> Focar em aumentar a visibilidade das iniciativas de diversidade em comunicações internas.</label>
+            <label><input type="radio" name="case14" value="0" onclick="nextCase(14)"> Abordar a diversidade apenas como uma questão de conformidade.</label>
+        </div>
+
+        <!-- Estudo de Caso 15 -->
+        <div id="case15" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 15:</strong> Balancing Work and Life: Você sente que sua carga de trabalho está afetando sua vida pessoal. O que você faria?</p>
+            <label><input type="radio" name="case15" value="5" onclick="nextCase(15)"> Conversar com meu gerente sobre a carga de trabalho e propor ajustes.</label>
+            <label><input type="radio" name="case15" value="4" onclick="nextCase(15)"> Priorizar a organização do meu tempo e definir limites claros entre trabalho e vida pessoal.</label>
+            <label><input type="radio" name="case15" value="1" onclick="nextCase(15)"> Trabalhar horas extras para compensar o tempo perdido e tentar equilibrar as coisas.</label>
+            <label><input type="radio" name="case15" value="2" onclick="nextCase(15)"> Considerar a possibilidade de procurar um novo emprego que ofereça melhor equilíbrio.</label>
+            <label><input type="radio" name="case15" value="0" onclick="nextCase(15)"> Ignorar a situação e continuar trabalhando da mesma forma.</label>
+        </div>
+
+<!-- Estudo de Caso 16 -->
+<div id="case14" class="case-study" style="display: none;">
+    <p><strong>Estudo de Caso 14:</strong> Inovação em um Mercado Saturado</p>
+    <p><em>Cenário:</em> Sua empresa está operando em um mercado altamente competitivo e saturado, onde a inovação é fundamental para se manter relevante. Como líder de produto, você é encarregado de lançar um novo produto que diferencie sua empresa dos concorrentes. No entanto, os recursos são limitados e o tempo é curto.</p>
+    <p><em>Pergunta:</em> Como você gerenciaria o desenvolvimento e lançamento desse novo produto?</p>
+    <label><input type="radio" name="case14" value="5" onclick="nextCase(14)"> Focar em uma pesquisa de mercado aprofundada para identificar uma lacuna específica que seu produto possa preencher. (5 pontos)</label><br>
+    <label><input type="radio" name="case14" value="4" onclick="nextCase(14)"> Lançar uma versão mínima viável (MVP) rapidamente para testar a aceitação no mercado e iterar a partir do feedback recebido. (4 pontos)</label><br>
+    <label><input type="radio" name="case14" value="1" onclick="nextCase(14)"> Investir em uma campanha de marketing inovadora que destaque as principais características únicas do produto, mesmo que o desenvolvimento ainda não esteja completo. (1 ponto)</label><br>
+    <label><input type="radio" name="case14" value="2" onclick="nextCase(14)"> Realizar um brainstorming com diferentes equipes para garantir que o produto seja inovador em várias frentes, desde o design até a experiência do usuário. (2 pontos)</label><br>
+    <label><input type="radio" name="case14" value="0" onclick="nextCase(14)"> Parceria com outra empresa para compartilhar recursos e acelerar o desenvolvimento do produto. (0 pontos)</label>
+</div>
+
+<!-- Estudo de Caso 17 -->
+<div id="case15" class="case-study" style="display: none;">
+    <p><strong>Estudo de Caso 15:</strong> Conflito Ético com Parceiros de Negócio</p>
+    <p><em>Cenário:</em> Sua empresa está prestes a fechar uma parceria estratégica com outra empresa que pode trazer grandes benefícios financeiros. No entanto, você descobre que essa empresa parceira está envolvida em práticas éticas duvidosas que podem prejudicar a reputação da sua empresa a longo prazo.</p>
+    <p><em>Pergunta:</em> Como você abordaria essa situação delicada?</p>
+    <label><input type="radio" name="case15" value="5" onclick="nextCase(15)"> Recusar a parceria, independentemente dos potenciais benefícios financeiros, para proteger a reputação da sua empresa. (5 pontos)</label><br>
+    <label><input type="radio" name="case15" value="4" onclick="nextCase(15)"> Negociar novos termos na parceria que exijam uma auditoria de práticas éticas e transparência da empresa parceira. (4 pontos)</label><br>
+    <label><input type="radio" name="case15" value="2" onclick="nextCase(15)"> Consultar a alta administração e o conselho de ética da sua empresa antes de tomar qualquer decisão. (2 pontos)</label><br>
+    <label><input type="radio" name="case15" value="1" onclick="nextCase(15)"> Prosseguir com a parceria, mas criar um plano de comunicação de crise para mitigar qualquer impacto negativo potencial. (1 ponto)</label><br>
+    <label><input type="radio" name="case15" value="0" onclick="nextCase(15)"> Explorar outras opções de parceria com empresas que tenham práticas éticas mais alinhadas com os valores da sua empresa. (0 pontos)</label>
+</div>
+
+<!-- Estudo de Caso 18 -->
+<div id="case16" class="case-study" style="display: none;">
+    <p><strong>Estudo de Caso 16:</strong> Expansão Internacional com Desafios Culturais</p>
+    <p><em>Cenário:</em> Sua empresa está planejando expandir suas operações para um novo país, mas você sabe que a cultura de negócios local é significativamente diferente daquela em que sua empresa está acostumada a operar. Além disso, há barreiras linguísticas e regulatórias a serem superadas.</p>
+    <p><em>Pergunta:</em> Como você garantiria o sucesso dessa expansão internacional?</p>
+    <label><input type="radio" name="case16" value="5" onclick="nextCase(16)"> Contratar especialistas locais para ajudar a navegar pelas diferenças culturais e regulatórias. (5 pontos)</label><br>
+    <label><input type="radio" name="case16" value="4" onclick="nextCase(16)"> Adaptar os produtos e serviços da empresa para atender às necessidades e expectativas do mercado local. (4 pontos)</label><br>
+    <label><input type="radio" name="case16" value="2" onclick="nextCase(16)"> Oferecer aulas de idiomas e cultura para a equipe que for trabalhar no novo mercado. (2 pontos)</label><br>
+    <label><input type="radio" name="case16" value="1" onclick="nextCase(16)"> Fazer uma parceria com uma empresa local para facilitar a entrada no mercado e superar as barreiras culturais. (1 ponto)</label><br>
+    <label><input type="radio" name="case16" value="0" onclick="nextCase(16)"> Seguir a mesma estratégia usada em outros mercados, sem grandes adaptações, para manter a consistência da marca. (0 pontos)</label>
+</div>
+
+        <button id="submitButton" style="display:none;" onclick="submitAnswers()">Enviar Respostas</button>
+    </div>
+
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<footer>
+    <p>@FEMTEC 2024 - Todos os direitos reservados.</p>
+</footer>
+
+    <script>
+        let currentCase = 1;
+
+        function nextCase(caseNumber) {
+            // Hide current case
+            document.getElementById(`case${currentCase}`).style.display = 'none';
+            // Show next case
+            currentCase++;
+            if (currentCase <= 15) {
+                document.getElementById(`case${currentCase}`).style.display = 'block';
+            } else {
+                document.getElementById('submitButton').style.display = 'block';
+            }
+        }
+
+        function submitAnswers() {
+            const scores = [];
+            for (let i = 1; i <= 15; i++) {
+                const selectedOption = document.querySelector(`input[name="case${i}"]:checked`);
+                if (selectedOption) {
+                    scores.push(parseInt(selectedOption.value));
+                } else {
+                    scores.push(0);
+                }
+            }
+
+            const totalScore = scores.reduce((a, b) => a + b, 0);
+
+            const resultMessage = totalScore >= 60 ? 'Parabéns! Você foi aceito.' : 'Infelizmente, você não foi aceito.';
+            alert(resultMessage);
+
+            // Send answers to email (placeholder function)
+            const emailBody = `Respostas: ${scores.join(', ')}`;
+            // Add email sending logic here (e.g., using a backend service)
+            console.log('Enviando e-mail com as respostas:', emailBody);
+        }
+
+        // Show the first case initially
+        document.getElementById(`case${currentCase}`).style.display = 'block';
+    </script>
+</body>
+</html>
